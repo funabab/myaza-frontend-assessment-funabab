@@ -1,0 +1,16 @@
+@theme {
+  --heading-1: 1.5rem;
+  --heading-1--line-height: auto;
+  --heading-1--letter-spacing: 0%;
+  --heading-1--font-weight: 600;
+
+  --title: 1.5rem;
+  --title--line-height: 1.75rem;
+  --title--letter-spacing: 0%;
+  --title--font-weight: 700;
+
+  --subtitle: 1rem;
+  --subtitle--line-height: 1.5rem;
+  --subtitle--letter-spacing: -4%;
+  --subtitle--font-weight: 400;
+}
