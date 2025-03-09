@@ -3,7 +3,10 @@ import { fontKarla } from "@/utils/fonts";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "UIFry",
+  title: {
+    template: "%s | UIFry Dashboard",
+    default: "UIFry Dashboard"
+  },
   description: "UIFry Dashboard"
 };
 

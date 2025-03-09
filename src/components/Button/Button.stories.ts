@@ -28,6 +28,7 @@ const meta = {
   args: { onClick: fn(), size: "default" }
 } satisfies Meta<typeof Button>;
 
+export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
@@ -58,5 +59,3 @@ export const Large: Story = {
     size: "lg"
   }
 };
-
-export default meta;

@@ -27,10 +27,12 @@ const inputVariants = cva(
 
 export interface InputProps
   extends InputHTMLAttributes<HTMLInputElement>,
-    VariantProps<typeof inputVariants> {}
+    VariantProps<typeof inputVariants> {
+  fullWidth?: boolean;
+}
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, variant, ...props }, ref) => {
+  ({ className, type, variant, fullWidth = false, ...props }, ref) => {
     const [isPasswordInput] = useState(() => type === "password");
     const [showPassword, setShowPassword] = useState(false);
     const Wrapper = isPasswordInput ? "div" : Fragment;
@@ -46,10 +48,17 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     );
 
     return (
-      <Wrapper className="relative size-max">
+      <Wrapper
+        {...(isPasswordInput && {
+          className: cn("relative size-max", fullWidth && "w-full")
+        })}
+      >
         <input
           type={inputType}
-          className={cn(inputVariants({ variant, className }))}
+          className={cn(
+            inputVariants({ variant, className }),
+            fullWidth && "w-full"
+          )}
           ref={ref}
           {...props}
         />

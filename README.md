@@ -7,6 +7,6 @@
 - Radix UI
 - Storybook
 - Tanstack Query
-- Tanstack Form
+- React Hook Form
 - Vitest
 - Zod

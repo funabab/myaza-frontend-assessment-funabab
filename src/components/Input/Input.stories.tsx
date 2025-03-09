@@ -7,6 +7,7 @@ const meta = {
   render: (args) => <Input {...args} className="w-96" />
 } satisfies Meta<typeof Input>;
 
+export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
@@ -28,5 +29,3 @@ export const Password: Story = {
     type: "password"
   }
 };
-
-export default meta;

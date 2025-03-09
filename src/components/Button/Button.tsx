@@ -5,13 +5,13 @@ import { Slot } from "radix-ui";
 import { ButtonHTMLAttributes, forwardRef } from "react";
 
 const buttonVariants = cva(
-  "inline-flex font-semibold text-base items-center disabled:opacity-50 cursor-pointer whitespace-nowrap transition-colors focus-visible:outline-none disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0",
+  "inline-flex font-semibold text-base items-center justify-center disabled:opacity-50 cursor-pointer whitespace-nowrap transition-colors focus-visible:outline-none disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         primary: "bg-primary text-primary-foreground hover:bg-primary/90",
         outline: "border border-primary text-primary hover:bg-primary/10",
-        link: "p-0 h-auto bg-none text-primary hover:underline underline-offset-4"
+        link: "!p-0 h-auto bg-none text-primary hover:underline underline-offset-4"
       },
       size: {
         default: "h-10 px-4 py-3 rounded-lg",
