@@ -1,25 +1,25 @@
 :root {
-  --background: "#141332";
-  --foreground: "#FFFFFF";
+  --background: #141332;
+  --foreground: #ffffff;
 
-  --primary: "#CBC8FF";
-  --priamry-foreground: "#1D1D41";
+  --primary: #cbc8ff;
+  --primary-foreground: #1d1d41;
 
-  --secondary: "#1D1D41";
-  --secondary-foreground: "#C1C1C1";
+  --secondary: #1d1d41;
+  --secondary-foreground: #c1c1c1;
 
-  --success: "#1A3527";
-  --success-foreground: "#02B15A";
+  --success: #1a3527;
+  --success-foreground: #02b15a;
 
-  --danger: "#3C193B";
-  --danger-foreground: "#E41414";
+  --danger: #3c193b;
+  --danger-foreground: #e41414;
 
-  --accent: "#8477FF";
+  --accent: #8477ff;
 
-  --muted: "#AEABD8";
-  --muted-foreground: "#8C89B4";
+  --muted: #aeabd8;
+  --muted-foreground: #8c89b4;
 
-  --border: "#DCD9D9";
+  --border: #dcd9d9;
 }
 
 @theme inline {
