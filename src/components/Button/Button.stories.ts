@@ -5,14 +5,11 @@ import { fn } from "@storybook/test";
 const meta = {
   title: "Components/Button",
   component: Button,
-  parameters: {
-    layout: "centered"
-  },
   argTypes: {
     variant: {
       type: "string",
       control: "select",
-      options: ["primary", "outline"]
+      options: ["primary", "outline", "link"]
     },
     size: {
       type: "symbol",
@@ -43,6 +40,13 @@ export const Primary: Story = {
 export const Outline: Story = {
   args: {
     variant: "outline",
+    children: "This is a button"
+  }
+};
+
+export const Link: Story = {
+  args: {
+    variant: "link",
     children: "This is a button"
   }
 };

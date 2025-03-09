@@ -13,7 +13,8 @@ const preview: Preview = {
     },
     docs: {
       theme: appTheme
-    }
+    },
+    layout: "centered"
   },
   tags: ["autodocs"]
 };

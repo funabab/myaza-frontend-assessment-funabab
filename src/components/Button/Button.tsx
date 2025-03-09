@@ -2,7 +2,7 @@ import { cn } from "@/libs/class-names";
 import { cva, VariantProps } from "class-variance-authority";
 import { Loader } from "lucide-react";
 import { Slot } from "radix-ui";
-import { forwardRef } from "react";
+import { ButtonHTMLAttributes, forwardRef } from "react";
 
 const buttonVariants = cva(
   "inline-flex font-semibold text-base items-center disabled:opacity-50 cursor-pointer whitespace-nowrap transition-colors focus-visible:outline-none disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0",
@@ -10,7 +10,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: "bg-primary text-primary-foreground hover:bg-primary/90",
-        outline: "border border-primary text-primary hover:bg-primary/10"
+        outline: "border border-primary text-primary hover:bg-primary/10",
+        link: "p-0 h-auto bg-none text-primary hover:underline underline-offset-4"
       },
       size: {
         default: "h-10 px-4 py-3 rounded-lg",
@@ -25,7 +26,7 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   loading?: boolean;
   asChild?: boolean;
