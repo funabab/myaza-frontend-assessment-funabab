@@ -100,7 +100,7 @@ export default function DashboardHomeContainer() {
         <div>
           <Card
             title={
-              <div className="flex justify-between gap-5 md:items-center">
+              <div className="flex justify-between gap-2 md:items-center md:gap-5">
                 <h2 className="text-xl font-semibold sm:text-2xl">Analytics</h2>
 
                 <div className="flex flex-col items-end gap-3 md:flex-row md:items-center md:gap-5">

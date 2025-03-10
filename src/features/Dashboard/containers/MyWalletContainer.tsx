@@ -64,7 +64,7 @@ export default function MyWalletContainer() {
     <main className="flex h-full grow flex-col gap-6">
       <Card
         title={
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
             <div>
               <p className="font-medium text-border">
                 Your consolidated balance
