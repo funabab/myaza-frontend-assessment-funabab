@@ -39,5 +39,6 @@ bun dev
 
 # Live Deployment
 
-You can also checkout the [live deployment](https://uifry-dashboard.vercel.app/auth/login) to quickly get started
+You can also checkout the [live deployment](https://uifry-dashboard.vercel.app/) to quickly get started
+
 
