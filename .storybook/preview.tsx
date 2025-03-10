@@ -1,6 +1,8 @@
+import React from "react";
 import type { Preview } from "@storybook/react";
 import "../src/styles/globals.css";
 import { appTheme } from "./theme";
+import { fontKarla } from "../src/utils/fonts";
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +18,13 @@ const preview: Preview = {
     },
     layout: "centered"
   },
+  decorators: [
+    (Story) => (
+      <div className={fontKarla.variable}>
+        <Story />
+      </div>
+    )
+  ],
   tags: ["autodocs"]
 };
 

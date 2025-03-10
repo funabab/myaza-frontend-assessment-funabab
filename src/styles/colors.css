@@ -20,6 +20,14 @@
   --muted-foreground: #8c89b4;
 
   --border: #dcd9d9;
+
+  --separator: #4b4b99;
+
+  --chart-1: #64cff6;
+  --chart-2: #5a51d4;
+  --chart-tooltip: #464687;
+
+  --payment-card-carousel: #27264e;
 }
 
 @theme inline {
@@ -44,4 +52,12 @@
   --color-muted-foreground: var(--muted-foreground);
 
   --color-border: var(--border);
+
+  --color-separator: var(--separator);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-tooltip: var(--chart-tooltip);
+
+  --color-payment-card-carousel: var(--payment-card-carousel);
 }

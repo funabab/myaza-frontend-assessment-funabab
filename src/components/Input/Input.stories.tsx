@@ -29,3 +29,16 @@ export const Password: Story = {
     type: "password"
   }
 };
+
+export const Search: Story = {
+  argTypes: {
+    type: {
+      control: false
+    }
+  },
+  args: {
+    variant: "default",
+    placeholder: "Search for anything....",
+    type: "search"
+  }
+};

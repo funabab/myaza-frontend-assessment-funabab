@@ -29,6 +29,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  parameters: {
+    layout: "centered"
+  },
   args: {
     rating: 5,
     message: `“I’ve been using Uifry for over a year, and it’s helped simplify all my payments.”`,

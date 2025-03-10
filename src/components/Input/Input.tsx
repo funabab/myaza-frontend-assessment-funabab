@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/libs/class-names";
 import { cva, VariantProps } from "class-variance-authority";
+import { Search } from "lucide-react";
 import {
   forwardRef,
   Fragment,
@@ -34,8 +35,9 @@ export interface InputProps
 const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, variant, fullWidth = false, ...props }, ref) => {
     const [isPasswordInput] = useState(() => type === "password");
+    const [isSearchInput] = useState(() => type === "search");
     const [showPassword, setShowPassword] = useState(false);
-    const Wrapper = isPasswordInput ? "div" : Fragment;
+    const Wrapper = isPasswordInput || isSearchInput ? "div" : Fragment;
     const inputType = useMemo(() => {
       if (isPasswordInput) {
         return showPassword ? "text" : "password";
@@ -49,7 +51,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <Wrapper
-        {...(isPasswordInput && {
+        {...((isPasswordInput || isSearchInput) && {
           className: cn("relative size-max", fullWidth && "w-full")
         })}
       >
@@ -57,7 +59,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           type={inputType}
           className={cn(
             inputVariants({ variant, className }),
-            fullWidth && "w-full"
+            fullWidth && "w-full",
+            isSearchInput &&
+              "h-10 rounded-lg border-none bg-secondary placeholder:text-muted"
           )}
           ref={ref}
           {...props}
@@ -70,10 +74,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             {showPassword ? "Hide" : "Show"}
           </button>
         )}
+        {isSearchInput && <Search className="absolute top-3 right-3 size-4" />}
       </Wrapper>
     );
   }
 );
 Input.displayName = "Input";
 
-export { inputVariants, Input };
+export { Input, inputVariants };
