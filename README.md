@@ -5,7 +5,7 @@
 - Next.js
 - Tailwindcss (v4)
 - Radix UI
-- Storybook
+- [Storybook](https://uifly-dashboard-storybook.vercel.app/)
 - Tanstack Query
 - React Hook Form
 - Zod
@@ -39,6 +39,8 @@ bun dev
 
 # Live Deployment
 
-You can also checkout the [live deployment](https://uifry-dashboard.vercel.app/) to quickly get started
+**Dashboard:** You can also access the [live deployment](https://uifry-dashboard.vercel.app/) to quickly get started
+
+**Storybook:** You can also checkout the storybook [live deployment](https://uifly-dashboard-storybook.vercel.app/).
 
 

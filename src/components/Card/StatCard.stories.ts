@@ -6,7 +6,11 @@ import { StatCard } from "./StatCard";
 const meta = {
   title: "Components/StatCard",
   component: StatCard,
-  argTypes: {}
+  argTypes: {
+    icon: {
+      control: false
+    }
+  }
 } satisfies Meta<typeof StatCard>;
 
 export default meta;
