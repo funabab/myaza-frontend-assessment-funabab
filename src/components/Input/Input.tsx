@@ -70,6 +70,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           <button
             className="absolute top-4 right-3 m-0 bg-none p-0 text-sm font-bold text-primary"
             onClick={handlePasswordToggle}
+            type="button"
           >
             {showPassword ? "Hide" : "Show"}
           </button>

@@ -4,7 +4,7 @@ import LoginForm from "../components/LoginForm/LoginForm";
 import { TestimonialCarousel } from "../components/Testimonial/TestimonialCarousel";
 import authDashboardViewImage from "@/assets/images/auth-dashboard-view.png";
 import Image from "next/image";
-import useLoginForm from "../hooks/useLoginForm";
+import { useLoginForm } from "../hooks/useLoginForm";
 
 const testimonials = [
   {
@@ -33,8 +33,14 @@ const testimonials = [
   }
 ];
 
-export default function LoginContainer() {
-  const { form, handleLogin } = useLoginForm();
+export interface LoginContainerProps {
+  redirectUrlAfterLogin?: string;
+}
+
+export default function LoginContainer({
+  redirectUrlAfterLogin
+}: LoginContainerProps) {
+  const { form, handleLogin } = useLoginForm({ redirectUrlAfterLogin });
 
   return (
     <div className="flex">

@@ -92,7 +92,9 @@ const NavMenu = ({
             <Avatar fallback={avatarFallbackText} />
             <span className="flex flex-col text-start text-base font-bold">
               <strong>{profile.name}</strong>
-              <span className="text-sm font-normal">{profile.role}</span>
+              <span className="text-sm font-normal capitalize">
+                {profile.role}
+              </span>
             </span>
             <DropdownIcon className="ml-auto" />
           </Button>
@@ -113,9 +115,14 @@ const NavMenu = ({
           </DropdownMenu.DropdownMenuLabel>
           <DropdownMenu.DropdownMenuSeparator className="-mx-1 my-1 h-px bg-separator" />
           <DropdownMenu.DropdownMenuGroup>
-            <DropdownMenu.DropdownMenuItem className="relative flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1.5 text-sm text-danger-foreground transition-colors outline-none select-none focus:bg-danger focus:text-danger-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
-              <LogOut className="mr-2 h-4 w-4" />
-              <span>Log out</span>
+            <DropdownMenu.DropdownMenuItem
+              className="relative flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1.5 text-sm text-danger-foreground transition-colors outline-none select-none focus:bg-danger focus:text-danger-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+              asChild
+            >
+              <a href="/api/auth/logout">
+                <LogOut className="mr-2 h-4 w-4" />
+                <span>Log out</span>
+              </a>
             </DropdownMenu.DropdownMenuItem>
           </DropdownMenu.DropdownMenuGroup>
         </DropdownMenu.Content>

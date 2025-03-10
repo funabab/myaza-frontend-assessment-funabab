@@ -1,38 +1,46 @@
-"use client";
-import { AppShell } from "@/features/Dashboard/components/Layout/AppShell";
-import {
-  defaultLayoutMetadata,
-  layoutMetadata
-} from "@/features/Dashboard/data/layout-metadata";
-import { menus } from "@/features/Dashboard/data/menus";
-import { useSelectedLayoutSegment } from "next/navigation";
+import { AuthProvider } from "@/features/Auth/components/Providers/AuthProvider";
+import { getUserProfile, refreshUserToken } from "@/features/Auth/utils/api";
+import { getRefreshTokenCookie } from "@/features/Auth/utils/cookie";
+import DashboardLayout from "@/features/Dashboard/components/Layout/DashboardLayout";
+import { createAxiosClient } from "@/utils/axios";
+import { redirect } from "next/navigation";
 import { ReactNode } from "react";
 
-export interface DashboardLayoutProps {
+export interface DashboardRootLayoutProps {
   children?: ReactNode;
 }
 
-export default function DashboardLayout({ children }: DashboardLayoutProps) {
-  const selectedLayoutSegment = useSelectedLayoutSegment();
-  const metadata =
-    layoutMetadata.find((meta) => meta.segment === selectedLayoutSegment) ||
-    defaultLayoutMetadata;
+export default async function DashboardRootLayout({
+  children
+}: DashboardRootLayoutProps) {
+  try {
+    const refreshToken = await getRefreshTokenCookie();
+    if (!refreshToken?.value) {
+      throw new Error("No refresh token found");
+    }
 
-  return (
-    <AppShell
-      title={metadata?.title}
-      subTitle={metadata?.subTitle}
-      navMenu={{
-        menus,
-        selectedSegment: selectedLayoutSegment,
-        profile: {
-          name: "John Doe",
-          email: "jane.doe@example.com",
-          role: "Web Developer"
-        }
-      }}
-    >
-      {children}
-    </AppShell>
-  );
+    const axios = createAxiosClient(refreshToken.value);
+    const tokens = await refreshUserToken(axios, refreshToken.value);
+    const user = await getUserProfile(createAxiosClient(tokens.accessToken));
+
+    return (
+      <AuthProvider
+        tokens={tokens}
+        user={{
+          email: user.email,
+          firstName: user.firstName,
+          id: user.id,
+          lastName: user.lastName,
+          role: user.role,
+          username: user.username,
+          image: user.image
+        }}
+      >
+        <DashboardLayout>{children}</DashboardLayout>
+      </AuthProvider>
+    );
+  } catch (e) {
+    console.error(e);
+    redirect("/api/auth/logout");
+  }
 }

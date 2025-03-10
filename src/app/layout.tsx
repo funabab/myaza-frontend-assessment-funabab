@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { fontKarla } from "@/utils/fonts";
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: {
@@ -21,6 +22,7 @@ export default function RootLayout({
         className={`${fontKarla.variable} ${fontKarla.variable} antialiased`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
