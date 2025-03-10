@@ -1,6 +1,6 @@
+import NGNFiatIcon from "@/assets/images/ngn-fiat-icon.svg";
 import { Meta, StoryObj } from "@storybook/react";
 import { FiatBalanceCard } from "./FiatBalanceCard";
-import NGNFiatIcon from "@/assets/images/ngn-fiat-icon.svg";
 
 const meta = {
   title: "Components/FiatBalanceCard",

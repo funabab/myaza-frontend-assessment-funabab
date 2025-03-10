@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { TestimonialCarousel } from "./TestimonialCarousel";
 import { TestimonialProps } from "./Testimonial";
+import { TestimonialCarousel } from "./TestimonialCarousel";
 
 const testimonial: TestimonialProps = {
   rating: 5,

@@ -1,16 +1,15 @@
+import AddWalletIcon from "@/assets/images/add-wallet.svg";
+import GBPFiatIcon from "@/assets/images/gbp-fiat-icon.svg";
+import MoreIcon from "@/assets/images/more-icon.svg";
+import NGNFiatIcon from "@/assets/images/ngn-fiat-icon.svg";
+import USDFiatIcon from "@/assets/images/usd-fiat-icon.svg";
 import { Button } from "@/components/Button/Button";
 import { Card } from "@/components/Card/Card";
-import React from "react";
-import AddWalletIcon from "@/assets/images/add-wallet.svg";
-import MoreIcon from "@/assets/images/more-icon.svg";
-import { FiatBalanceCard } from "../FiatBalanceCard/FiatBalanceCard";
-import NGNFiatIcon from "@/assets/images/ngn-fiat-icon.svg";
-import GBPFiatIcon from "@/assets/images/gbp-fiat-icon.svg";
-import USDFiatIcon from "@/assets/images/usd-fiat-icon.svg";
 import {
   Transaction,
   TransactionTable
 } from "@/components/TransactionTable/TransactionTable";
+import { FiatBalanceCard } from "../FiatBalanceCard/FiatBalanceCard";
 
 const recentTransactions: Transaction[] = [
   {

@@ -1,9 +1,9 @@
 "use client";
-import React, { ComponentProps } from "react";
 import Logo from "@/assets/images/logo.svg";
-import { InputField } from "@/components/InputField/InputField";
 import { Button } from "@/components/Button/Button";
+import { InputField } from "@/components/InputField/InputField";
 import Link from "next/link";
+import { ComponentProps } from "react";
 import { UseFormReturn } from "react-hook-form";
 
 export interface LoginFormProps extends ComponentProps<"div"> {

@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
-import LoginForm from "../components/LoginForm/LoginForm";
-import { TestimonialCarousel } from "../components/Testimonial/TestimonialCarousel";
 import authDashboardViewImage from "@/assets/images/auth-dashboard-view.png";
 import Image from "next/image";
+import LoginForm from "../components/LoginForm/LoginForm";
+import { TestimonialCarousel } from "../components/Testimonial/TestimonialCarousel";
 import { useLoginForm } from "../hooks/useLoginForm";
 
 const testimonials = [

@@ -1,6 +1,6 @@
+import { isAxiosError } from "axios";
 import process from "process";
 import { SITE_URL } from "./constants";
-import { isAxiosError } from "axios";
 
 export const getAbsoluteUrl = (path: string) => {
   if (SITE_URL) {

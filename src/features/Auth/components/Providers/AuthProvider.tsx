@@ -1,4 +1,5 @@
 "use client";
+import { createAxiosClient } from "@/utils/axios";
 import {
   createContext,
   ReactNode,
@@ -7,7 +8,6 @@ import {
   useState
 } from "react";
 import { AuthUserProfile, Tokens } from "../../typings";
-import { createAxiosClient } from "@/utils/axios";
 import { refreshUserToken } from "../../utils/api";
 
 export type AuthProviderType = {

@@ -1,6 +1,6 @@
+import { menus } from "@/features/Dashboard/data/menus";
 import { Meta, StoryObj } from "@storybook/react";
 import { NavMenu } from "./NavMenu";
-import { menus } from "@/features/Dashboard/data/menus";
 
 const meta = {
   title: "Layouts/DashboardLayout/NavMenu",

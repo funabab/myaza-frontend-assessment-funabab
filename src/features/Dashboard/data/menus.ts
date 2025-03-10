@@ -1,10 +1,10 @@
-import { createElement, ReactNode } from "react";
-import DashboardIcon from "@/assets/images/dashboard-icon.svg";
-import AnalyticsIcon from "@/assets/images/analytics-icon.svg";
-import WalletIcon from "@/assets/images/wallet-icon.svg";
 import AccountsIcon from "@/assets/images/accounts-icon.svg";
-import SettingsIcon from "@/assets/images/settings-icon.svg";
+import AnalyticsIcon from "@/assets/images/analytics-icon.svg";
+import DashboardIcon from "@/assets/images/dashboard-icon.svg";
 import HelpCenterIcon from "@/assets/images/help-icon.svg";
+import SettingsIcon from "@/assets/images/settings-icon.svg";
+import WalletIcon from "@/assets/images/wallet-icon.svg";
+import { createElement, ReactNode } from "react";
 
 export type Menu =
   | {

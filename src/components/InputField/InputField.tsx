@@ -1,6 +1,6 @@
+import { cn } from "@/libs/class-names";
 import { useId } from "react";
 import { Input, InputProps } from "../Input/Input";
-import { cn } from "@/libs/class-names";
 
 export interface InputFieldProps {
   label: string;

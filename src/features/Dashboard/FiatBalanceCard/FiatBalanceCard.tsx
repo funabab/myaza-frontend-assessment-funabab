@@ -1,5 +1,5 @@
 import { cn } from "@/libs/class-names";
-import React, { ComponentProps, ReactNode } from "react";
+import { ComponentProps, ReactNode } from "react";
 
 export interface FiatBalanceCardProps extends ComponentProps<"div"> {
   icon: ReactNode;

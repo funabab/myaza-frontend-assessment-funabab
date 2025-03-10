@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/libs/class-names";
 import { Avatar } from "radix-ui";
-import React, { ComponentProps } from "react";
+import { ComponentProps } from "react";
 
 export interface Transaction {
   id: string;

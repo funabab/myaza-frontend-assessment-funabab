@@ -1,5 +1,5 @@
 import { cn } from "@/libs/class-names";
-import React, { ComponentProps } from "react";
+import { ComponentProps } from "react";
 
 const Loader = ({ className, ...props }: ComponentProps<"div">) => {
   return (

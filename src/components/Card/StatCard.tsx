@@ -1,6 +1,6 @@
+import { cn } from "@/libs/class-names";
 import { ReactNode } from "react";
 import { Card } from "./Card";
-import { cn } from "@/libs/class-names";
 
 export interface StatCardProps {
   icon: ReactNode;

@@ -1,11 +1,11 @@
 import Logo from "@/assets/images/logo.svg";
 import { Input } from "@/components/Input/Input";
+import "@/styles/cmdk.css";
 import Link from "next/link";
 import React, { MouseEventHandler, useCallback, useState } from "react";
+import CommandPalette, { filterItems, renderJsonStructure } from "react-cmdk";
 import { HambugerMenu } from "./HambudgerMenu";
 import { NavMenu, NavMenuProps } from "./NavMenu";
-import CommandPalette, { filterItems, renderJsonStructure } from "react-cmdk";
-import "@/styles/cmdk.css";
 
 export interface AppShellProps {
   title: string;

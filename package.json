@@ -15,7 +15,7 @@
     "@hookform/resolvers": "^4.1.3",
     "@tanstack/react-query": "^5.67.2",
     "axios": "^1.8.2",
-    "class-variance-authority": "^0.7.1",
+    "class-variance-authority": "^0.7.1age",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "jose": "^6.0.8",

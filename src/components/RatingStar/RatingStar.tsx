@@ -1,6 +1,6 @@
-import React, { ComponentProps } from "react";
 import RatingStarIcon from "@/assets/images/rating-star.svg";
 import { cn } from "@/libs/class-names";
+import { ComponentProps } from "react";
 
 export interface RatingStarProps extends ComponentProps<"div"> {
   rating: number;

@@ -1,18 +1,17 @@
 "use client";
-import { StatCard } from "@/components/Card/StatCard";
-import React from "react";
+import DropdownIcon from "@/assets/images/arrow-down-icon.svg";
 import StatsArrowDownIcon from "@/assets/images/stats-arrow-down-icon.svg";
 import StatsArrowUpIcon from "@/assets/images/stats-arrow-up-icon.svg";
+import { Button } from "@/components/Button/Button";
 import { Card } from "@/components/Card/Card";
+import { StatCard } from "@/components/Card/StatCard";
+import { ActivityChart } from "@/components/Chart/ActivityChart";
 import { AnalyticsChart } from "@/components/Chart/AnalyticsChart";
-import DropdownIcon from "@/assets/images/arrow-down-icon.svg";
 import {
   Transaction,
   TransactionTable
 } from "@/components/TransactionTable/TransactionTable";
 import { PaymentCarousel } from "../components/PaymentCarousel/PaymentCarousel";
-import { Button } from "@/components/Button/Button";
-import { ActivityChart } from "@/components/Chart/ActivityChart";
 
 const analyticsData = [
   { month: "Jan", income: 35000, outcome: 25000 },

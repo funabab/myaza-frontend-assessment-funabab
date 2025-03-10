@@ -1,7 +1,6 @@
-import React from "react";
 import LoginContainer from "@/features/Auth/containers/LoginContainer";
-import { Metadata } from "next";
 import { redirectToIfLoggedIn } from "@/features/Auth/utils/helpers";
+import { Metadata } from "next";
 import { headers } from "next/headers";
 
 export const metadata: Metadata = {

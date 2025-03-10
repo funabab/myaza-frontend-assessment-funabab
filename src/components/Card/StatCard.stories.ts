@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { StatCard } from "./StatCard";
-import { createElement } from "react";
 import StatsArrowDownIcon from "@/assets/images/stats-arrow-down-icon.svg";
+import { Meta, StoryObj } from "@storybook/react";
+import { createElement } from "react";
+import { StatCard } from "./StatCard";
 
 const meta = {
   title: "Components/StatCard",

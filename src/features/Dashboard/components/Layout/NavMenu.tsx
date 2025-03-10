@@ -1,16 +1,15 @@
 "use client";
+import DropdownIcon from "@/assets/images/arrow-down-icon.svg";
+import DarkThemeIcon from "@/assets/images/dark-theme-icon.svg";
 import Logo from "@/assets/images/logo.svg";
+import { Avatar } from "@/components/Avatar/Avatar";
 import { Button } from "@/components/Button/Button";
 import { Menu } from "@/features/Dashboard/data/menus";
 import { cn } from "@/libs/class-names";
-import { ComponentProps, useMemo } from "react";
-import { Separator } from "radix-ui";
-import DarkThemeIcon from "@/assets/images/dark-theme-icon.svg";
-import Link from "next/link";
-import { Avatar } from "@/components/Avatar/Avatar";
-import DropdownIcon from "@/assets/images/arrow-down-icon.svg";
-import { DropdownMenu } from "radix-ui";
 import { LogOut } from "lucide-react";
+import Link from "next/link";
+import { DropdownMenu, Separator } from "radix-ui";
+import { ComponentProps, useMemo } from "react";
 
 export interface NavMenuProps extends ComponentProps<"nav"> {
   menus: Menu[];
