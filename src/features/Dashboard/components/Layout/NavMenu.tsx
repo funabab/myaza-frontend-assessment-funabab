@@ -55,9 +55,12 @@ const NavMenu = ({
                   selectedSegment !== menu.segment && "font-normal"
                 )}
                 variant={selectedSegment === menu.segment ? "primary" : "ghost"}
+                asChild
               >
-                {menu.icon}
-                {menu.label}
+                <Link href={menu.href}>
+                  {menu.icon}
+                  {menu.label}
+                </Link>
               </Button>
             )}
             {menu.type === "divider" && (

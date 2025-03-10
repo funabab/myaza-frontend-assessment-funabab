@@ -29,7 +29,7 @@ export const menus: Menu[] = [
   {
     segment: "analytics",
     type: "menu-item",
-    href: "/analytics",
+    href: "#",
     label: "Analytics",
     icon: createElement(AnalyticsIcon)
   },
@@ -43,14 +43,14 @@ export const menus: Menu[] = [
   {
     segment: "accounts",
     type: "menu-item",
-    href: "/accounts",
+    href: "#",
     label: "Accounts",
     icon: createElement(AccountsIcon)
   },
   {
     segment: "settings",
     type: "menu-item",
-    href: "/settings",
+    href: "#",
     label: "Settings",
     icon: createElement(SettingsIcon)
   },
@@ -60,7 +60,7 @@ export const menus: Menu[] = [
   {
     segment: "help-center",
     type: "menu-item",
-    href: "/help-center",
+    href: "#",
     label: "Help Center",
     icon: createElement(HelpCenterIcon)
   }

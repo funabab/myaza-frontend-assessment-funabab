@@ -124,6 +124,7 @@ export default function DashboardHomeContainer() {
                 </div>
               </div>
             }
+            className="p-6"
           >
             <div className="relative h-64.25 min-w-0">
               <AnalyticsChart

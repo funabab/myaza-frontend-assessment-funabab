@@ -48,7 +48,7 @@ const AppShell = ({ title, subTitle, navMenu, children }: AppShellProps) => {
               />
             </div>
           </div>
-          <div className="grow px-6 pb-4.5 md:overflow-auto lg:px-10">
+          <div className="relative grow px-6 pb-4.5 md:overflow-auto lg:px-10">
             {children}
           </div>
         </div>

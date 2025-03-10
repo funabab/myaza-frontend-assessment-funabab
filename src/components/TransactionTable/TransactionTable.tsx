@@ -36,11 +36,11 @@ const TransactionTable = ({
         <tr>
           {!filter.icon && <td className="text-sm text-muted">Name</td>}
           {!filter.date && <td className="px-3 text-sm text-muted">Date</td>}
-          {!filter.amount && (
-            <td className="px-3 text-sm text-muted">Amount</td>
-          )}
           {!filter.description && (
             <td className="px-3 text-sm text-muted">Description</td>
+          )}
+          {!filter.amount && (
+            <td className="px-3 text-sm text-muted">Amount</td>
           )}
           {!filter.status && <td className="text-sm text-muted">Status</td>}
         </tr>
@@ -68,16 +68,17 @@ const TransactionTable = ({
                 {transaction.date}
               </td>
             )}
-            {!filter.amount && (
-              <td className="px-3 py-3 text-sm whitespace-nowrap">
-                {transaction.amount}
-              </td>
-            )}
             {!filter.description && (
               <td className="px-3 py-3 text-sm whitespace-nowrap">
                 {transaction.description}
               </td>
             )}
+            {!filter.amount && (
+              <td className="px-3 py-3 text-sm whitespace-nowrap">
+                {transaction.amount}
+              </td>
+            )}
+
             {!filter.status && (
               <td className="py-3 text-sm whitespace-nowrap">
                 <span
